@@ -37,6 +37,11 @@ nav ul li {
         margin: 5px;
         font-size: 8px;
         color: #fff;
+        transition: all;
+}
+
+nav ul li:hover {
+        background-image: radial-gradient(circle, brown, rosybrown 25%); 
 }
 
 /* Main */
@@ -89,6 +94,27 @@ figcaption {
         padding: 5px;
 }
 
+div figure img {
+        animation-name: myanimation;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        transition-property: border-radius;
+        transition-duration: 1s;
+}
+
+@keyframes myanimation {
+        0% {border-radius: 50% 50% 50% 50%;}
+        25% {border-radius: 0 50% 50% 50%;}
+        50% {border-radius: 0 0 50% 50%;}
+        75% {border-radius: 0 0 0 50%;}
+        100% {border-radius: 0 0 0 0;}
+}
+
+div figure img:hover {
+        border-radius: 50%;
+}
+
 /* Footer */
 footer {
         clear: both;
@@ -97,195 +123,44 @@ footer {
         padding: 10px 5px;
         font-size: 8px;
 }
-
 /* TABLET */
 @media screen and (min-width: 526px) and (max-width: 1007px) {
         /*Header*/
-        @font-face {
-                font-family: Sacramento;
-                src: url(Sacramento-Regular.ttf);
-        }
-        h1 {
-                color: rosybrown;
-                font-family: Sacramento;
-                text-align: center;
-                font-size: 36px;
-                margin: 0;
-        }
 
-        nav {
-                background-color: rosybrown;
-        }
 
         nav ul {
-                list-style: none;
-                text-align: center;
-                padding-left: 0;
-                padding-top: 5px;
                 padding-bottom: 10px;
-                margin: 0;
         }
 
         nav ul li {
                 display: inline;
-                margin: 5px;
-                font-size: 8px;
-                color: #fff;
-        }
-
-        /* Main */
-        figure.banner {
-                width: 100%;
-                margin: auto;
-                text-align: center;
-                float: none;
-        }
-
-        figure.banner img {
-                width: 100%;
-                padding: 0;
-        }
-
-        h2 {
-                font-family: Sacramento;
-                text-align: center;
-                color: rosybrown;
-                margin-bottom: 0;
-        }
-
-        p {
-                text-align: center;
-                font-size: 10px;
-                margin: 0;
-                padding: 10px;
-        }
-
-        div {
-                display: flex;
-                justify-content: space-around;
-        }
-
-        figure {
-                width: 30%;
-                float: left;
-                margin: auto;
-        }
-
-        figure img {
-                width: 100%;
-        }
-
-        figcaption {
-                text-align: center;
-                color: rosybrown;
-                font-family: Sacramento;
-                font-size: 12px;
-                padding: 5px;
-        }
-
-        /* Footer */
-        footer {
-                clear: both;
-                background-color: rosybrown;
-                color: #fff;
-                padding: 10px 5px;
-                font-size: 8px;
         }
 }
 
 /* DESKTOP */
 @media screen and (min-width: 1008px) {
         /*Header*/
-        @font-face {
-                font-family: Sacramento;
-                src: url(Sacramento-Regular.ttf);
-        }
-        h1 {
-                color: rosybrown;
-                font-family: Sacramento;
-                text-align: center;
-                font-size: 36px;
-                margin: 0;
-        }
-
-        nav {
-                background-color: rosybrown;
-        }
 
         nav ul {
-                list-style: none;
-                text-align: center;
-                padding-left: 0;
-                padding-top: 5px;
-                padding-bottom: 10px;
-                margin: 0;
+                padding-bottom: 5px;
         }
 
         nav ul li {
                 display: inline;
-                margin: 5px;
-                font-size: 8px;
-                color: #fff;
         }
 
         /* Main */
-        figure.banner {
-                width: 85%;
-                margin: auto;
-                text-align: center;
-                float: none;
-        }
-
-        figure.banner img {
-                width: 100%;
-                padding: 0;
-        }
-
-        h2 {
-                font-family: Sacramento;
-                text-align: center;
-                color: rosybrown;
-                margin-bottom: 0;
-        }
-
-        p {
-                text-align: center;
-                font-size: 10px;
-                margin: 0;
-                padding: 10px;
-        }
-
         div {
-                display: flex;
-                justify-content: space-around;
                 width: 80%;
                 margin: auto;
         }
 
         figure {
                 width: 27%;
-                float: left;
-                margin: auto;
-        }
-
-        figure img {
-                width: 100%;
         }
 
         figcaption {
-                text-align: center;
-                color: rosybrown;
-                font-family: Sacramento;
                 font-size: 18px;
                 padding: 10px;
-        }
-
-        /* Footer */
-        footer {
-                clear: both;
-                background-color: rosybrown;
-                color: #fff;
-                padding: 10px 5px;
-                font-size: 8px;
         }
 }
